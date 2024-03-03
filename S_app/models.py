@@ -8,7 +8,7 @@ class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id_user = models.IntegerField()
     bio = models.TextField(blank=True)
-    profile_img = models.FileField()
+    profile_img = models.FileField(upload_to='profile_images')
     location = models.CharField(max_length=100, blank=True)
 
 
